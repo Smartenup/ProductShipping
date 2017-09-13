@@ -1,0 +1,9 @@
+﻿Group: Widgets
+FriendlyName: Product Estimate Shipping
+SystemName: Widgets.ProductShipping
+Version: 1.09
+SupportedVersions: 3.80
+Author: Pedro Usinskas
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.ProductShipping.dll
+Description: This plugin allows you estimate shipping at the products page

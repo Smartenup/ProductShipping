@@ -1,0 +1,140 @@
+﻿
+.product-shipping-cart-footer {
+	margin: 0 0 50px;
+	border-top: 1px solid #ddd;
+}
+.product-shipping-cart-footer:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.product-shipping-cart-footer {
+	max-width: 350px;
+	margin: 0;
+}
+
+.product-shipping-cart-footer {
+	border-top: none;
+}
+
+.product-shipping-cart-collaterals {
+	width: 350px;
+	max-width: 100%;
+	margin: 0 auto 50px;
+	padding: 25px 0 0;
+}
+.product-shipping-cart-collaterals > div {
+	max-width: 400px;
+	margin: 0 0 50px;
+}
+.product-shipping-cart-collaterals .button-2 {
+	display: inline-block;
+	border: none;
+	background-color: #aaa;
+	padding: 10px 15px;
+	color: #fff;
+	text-transform: uppercase;
+}
+.product-shipping-cart-collaterals .button-2:hover {
+	background-color: #999;
+}
+
+.product-shipping-cart-collaterals .title {
+	margin: 0 0 5px;
+	font-size: 18px;
+	color: #444;
+}
+.product-shipping-cart-collaterals .title strong {
+	font-weight: normal;
+}
+.product-shipping-cart-collaterals .hint {
+	margin: 0 0 10px;
+}
+.product-shipping-cart-collaterals .deals > div {
+	margin: 0 0 20px;
+}
+.product-shipping-cart-collaterals .coupon-code {
+	overflow: hidden;
+}
+.product-shipping-cart-collaterals .coupon-code input[type="text"] {
+	float: left;
+	width: 60%;
+	height: 36px; /*safari padding fix*/
+	margin: 0 -1px 0 0;
+}
+.product-shipping-cart-collaterals .coupon-code input[type="submit"] {
+	float: left;
+	width: 40%;
+	height: 36px; /*safari padding fix*/
+	padding: 0;
+}
+.product-shipping-cart-collaterals .message-failure {
+	margin: 5px 0 0;
+	font-size: 12px;
+	color: #e4434b;
+}
+.product-shipping-cart-collaterals .message-success {
+	margin: 5px 0 0;
+	font-size: 12px;
+	color: #4cb17c;
+}
+.product-shipping-cart-collaterals .current-code {
+	margin: 5px 0 0;
+	color: #4cb17c;
+}
+
+.product-shipping-cart-footer .product-shipping-cart-collaterals {
+	width: 760px;
+	margin: 0;
+}
+.product-shipping-cart-footer .product-shipping-cart-collaterals .deals {
+	float: left;
+	width: 360px;
+}
+.product-shipping-cart-footer .product-shipping-cart-collaterals .shipping {
+	float: right;
+	width: 360px;
+}
+
+
+.product-shipping-cart-footer .product-shipping {
+	float: right;	
+}
+
+.product-shipping-cart-footer .product-estimate-shipping .inputs label {
+	display: inline-block;
+	width: 35%;
+}
+.product-shipping-cart-footer .product-estimate-shipping .inputs input,
+.product-shipping-cart-footer .product-estimate-shipping .inputs select {
+	width: 100%;
+}
+
+.product-shipping-cart-footer .checkout-buttons,
+.product-shipping-cart-footer .addon-buttons {
+	text-align: right;
+}
+
+.product-shipping-cart-footer .product-estimate-shipping label {
+	display: block;
+	margin: 0 0 10px;
+}
+.product-shipping-cart-footer .product-estimate-shipping .buttons {
+	text-align: right;
+}
+.product-shipping select {
+	height: 36px;
+}
+
+.product-shipping-results {
+	margin: 30px 0 0;
+}
+.product-shipping-results li {
+	margin: 20px 0;
+}
+.product-shipping-results li strong {
+	display: block;
+	margin: 0 0 5px;
+	color: #444;
+}

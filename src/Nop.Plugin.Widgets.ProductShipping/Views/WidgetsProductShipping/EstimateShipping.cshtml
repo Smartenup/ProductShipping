@@ -1,0 +1,64 @@
+﻿@model Nop.Plugin.Widgets.ProductShipping.Models.EstimateShippingModel
+@{
+    Layout = "";
+    Html.AddCssFileParts("~/Plugins/Widgets.ProductShipping/Content/productshipping/productshipping.css");
+}
+@using Nop.Web.Framework;
+@using Nop.Web.Framework.UI;
+
+<div class="product-shipping-cart-footer">
+    <div class="product-shipping-cart-collaterals">
+        <div class="product-shipping">
+            <div class="product-estimate-shipping">
+                <div class="title">
+                    <strong>@T("ShoppingCart.EstimateShipping")</strong>
+                </div>
+                <div class="hint">@T("ShoppingCart.EstimateShipping.Tooltip")</div>
+                <div class="shipping-options">
+                    <div class="inputs">
+                        @Html.HiddenFor(model => model.ProductId)
+                        @Html.LabelFor(model => model.ZipPostalCode, new { }, ":")
+                        @Html.TextBoxFor(model => model.ZipPostalCode, new { @class = "zip-input" })
+                    </div>
+                    <div class="buttons">
+                        <input id="estimate-shipping-button" type="button" value="@T("ShoppingCart.EstimateShipping.Button")" class="button-2 estimate-shipping-button" />
+                    </div>
+                </div>
+                <div class="estimate-shipping-result"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#estimate-shipping-button').click(function() {
+
+            var cep = $("#@Html.FieldIdFor(model => model.ZipPostalCode)");
+
+            var productId = $("#@Html.FieldIdFor(model => model.ProductId)").val();
+
+            cep = cep.val().replace(/\D/g, "");
+
+            displayAjaxLoading(true);
+
+            var formProductDetails = $('#product-details-form').serialize()
+
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "@(Url.RouteUrl("Plugin.Widgets.ProductShipping.GetEstimateShipping"))",
+                data: { "zipPostalCode": cep, "productId": productId, "formProductDetails": formProductDetails },
+                success: function (data) {
+                    displayAjaxLoading();
+                    $('.estimate-shipping-result').html(data);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    displayAjaxLoading();
+                    alert('Failed to retrieve estimate shipping.');
+                }
+            });
+            
+        });
+    });
+</script>
