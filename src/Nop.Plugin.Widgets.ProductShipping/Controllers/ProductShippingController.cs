@@ -8,6 +8,7 @@ using Nop.Services.Tax;
 using Nop.Web.Framework;
 using Nop.Web.Framework.Controllers;
 using Nop.Web.Framework.Security;
+using SmartenUP.Core.Services.Shippping;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -16,18 +17,18 @@ namespace Nop.Plugin.Widgets.ProductShipping.Controllers
     public class ProductShippingController : BasePluginController
     {
 
-        private readonly IShippingService _shippingService;
+        private readonly ISUPShippingService _supShippingService;
         private readonly IWorkContext _workContext;
         private readonly IStoreContext _storeContext;
         private readonly ITaxService _taxService;
         private readonly ICurrencyService _currencyService;        
         private readonly IPriceFormatter _priceFormatter;
 
-        public ProductShippingController(IShippingService shippingService, IWorkContext workContext,
+        public ProductShippingController(ISUPShippingService supShippingService, IWorkContext workContext,
             IStoreContext storeContext, ITaxService taxService, 
             ICurrencyService currencyService, IPriceFormatter priceFormatter)
         {
-            _shippingService = shippingService;
+            _supShippingService = supShippingService;
             _workContext = workContext;
             _storeContext = storeContext;
             _taxService = taxService;
@@ -85,7 +86,7 @@ namespace Nop.Plugin.Widgets.ProductShipping.Controllers
             };
 
 
-            GetShippingOptionResponse getShippingOptionResponse = _shippingService
+            GetShippingOptionResponse getShippingOptionResponse = _supShippingService
                     .GetShippingOptions(productId, address, _workContext.CurrentCustomer, _storeContext.CurrentStore.Id, formProductDetails);
 
             if (getShippingOptionResponse.Success)
