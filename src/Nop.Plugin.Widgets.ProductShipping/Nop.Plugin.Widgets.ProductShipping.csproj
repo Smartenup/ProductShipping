@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\NopCommerceSmartenup\Presentation\Nop.Web\Plugins\Widgets.ProductShipping\</OutputPath>
+    <OutputPath>..\..\..\NopCommerceSmartenup\src\Presentation\Nop.Web\Plugins\Widgets.ProductShipping\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\NopCommerceSmartenup\Presentation\Nop.Web\Plugins\Widgets.ProductShipping\</OutputPath>
+    <OutputPath>..\..\..\NopCommerceSmartenup\src\Presentation\Nop.Web\Plugins\Widgets.ProductShipping\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -147,6 +147,7 @@
     <ProjectReference Include="..\..\..\SmartenUPCore\src\SmartenUP.Nop.Core\SmartenUP.Core.csproj">
       <Project>{41643A41-62C4-4292-9F52-EED3E5E07A07}</Project>
       <Name>SmartenUP.Core</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
